@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/projekte/pdftoide/',
+  base: '/pdf-to-mrcf/',
   optimizeDeps: {
     exclude: ['pdfjs-dist'],
   },

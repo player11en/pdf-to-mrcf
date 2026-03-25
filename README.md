@@ -9,6 +9,7 @@ The app runs fully in the browser (client-side): no upload server, no storage, n
 This repository is the technical home for the **PDF to IDE** app. It is designed as a companion tool to the MRCF ecosystem.
 
 - MRCF Protocol: https://github.com/player11en/MRCF-Protocol
+- GitHub Pages URL: https://player11en.github.io/pdf-to-mrcf/
 
 ## Features
 
@@ -50,7 +51,7 @@ npm install
 npm run dev
 ```
 
-Vite will print the local URL (currently configured with base path `/projekte/pdftoide/`).
+Vite will print the local URL (configured for GitHub Pages base path `/pdf-to-mrcf/`).
 
 ### Build
 
@@ -58,11 +59,30 @@ Vite will print the local URL (currently configured with base path `/projekte/pd
 npm run build
 ```
 
+Build output is generated into `dist/` and is ready for GitHub Pages.
+
 ### Preview production build
 
 ```bash
 npm run preview
 ```
+
+## Deploy to GitHub Pages
+
+This project is configured for GitHub Pages with Vite base path:
+
+```js
+base: '/pdf-to-mrcf/'
+```
+
+Manual deploy flow:
+
+```bash
+npm install
+npm run build
+```
+
+Then publish the `dist/` content to GitHub Pages (via `gh-pages` branch or GitHub Actions).
 
 ## Usage
 
